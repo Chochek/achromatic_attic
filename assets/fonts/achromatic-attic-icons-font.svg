@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2014-2-23: Created.
+-->
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Sun Feb 23 22:09:33 2014
+ By Marko Čorokalo
+Created by Marko &#196;&#140;orokalo with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="achromatic-attic-icons-font" horiz-adv-x="512" >
+  <font-face 
+    font-family="achromatic-attic-icons-font"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="121.8 29.0908 390.2 448"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F152-F153"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uniF152" unicode="&#xf152;" 
+d="M347.191 448h43.0088l-123.076 -418.909h-22.2393l-123.075 418.909h42.999l91.6475 -91.1914zM256.456 122.508l69.2412 251.346l-54.8682 -59.3184h-30.3936l-54.8682 59.3184z" />
+    <glyph glyph-name="uniF153" unicode="&#xf153;" 
+d="M164.809 29.0908h-43.0088l123.085 418.909h22.2393l123.066 -418.909h-42.999l-91.6475 91.1924zM255.544 354.583l-69.2412 -251.345l54.8682 59.3174h30.3936l54.8682 -59.3174z" />
+  </font>
+</defs></svg>

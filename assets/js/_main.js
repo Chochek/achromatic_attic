@@ -60,4 +60,46 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
+$(function() {
+
+  navbarOffsetTop = $('#top-navbar').offset().top;
+
+  $(window).on("scroll", function() {
+
+    if ($("body").scrollTop() > 0) {
+      bodyelem = $("body");
+    } else {
+      bodyelem = $("html,body");
+    }
+
+    var fromTop = bodyelem.scrollTop();
+
+    if (fromTop > navbarOffsetTop) {
+      $('#top-navbar').removeClass('navbar-static-top').addClass('navbar-fixed-top');
+      $('.banner').css('margin-bottom', '146px');
+    }
+
+    if (fromTop <= navbarOffsetTop && $('#top-navbar').hasClass('navbar-fixed-top')) {
+      $('#top-navbar').removeClass('navbar-fixed-top').addClass('navbar-static-top');
+      $('.banner').css('margin-bottom', '0px');
+    }
+
+  });
+
+  var altcrement = -1;
+  $(window).resize(function(){
+    var currentFontSize = parseFloat($('html').css('font-size'));
+    $('html').css('font-size', currentFontSize + (altcrement *= -1) + 'px');
+    navbarOffsetTop = $('#top-navbar').offset().top;
+  });
+
+  $('.arrow-header').on('click', function() {
+    $("html, body").animate({scrollTop: navbarOffsetTop }, 1000);
+  });
+
+
+
+});
+
+
 })(jQuery); // Fully reference jQuery after this point.

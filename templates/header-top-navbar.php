@@ -1,4 +1,8 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
+<header class="banner" role="banner">
+  <i class="icon-arrow-down arrow-header"></i>
+</header>
+
+<header class="navbar navbar-default navbar-static-top" id="top-navbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
