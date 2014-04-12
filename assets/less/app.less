@@ -11,12 +11,27 @@
 
 @black: #000000;
 @white: #ffffff;
+@gray: #444444;
+@text: #303431;
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+html, body { height: 100%; }
+p { font-family: 'Open Sans', sans-serif; }
+a, a:hover, a:active, a:focus { outline: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
+
+.flip-vertical {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
 
 
 /* ==========================================================================
@@ -24,39 +39,94 @@ body { }
    ========================================================================== */
 
 .banner {
-   height: 100vh;
-   background-color: @black;
-   background-image: url(../img/header-bg.png);
-   background-repeat: no-repeat;
-   background-position: center top;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   background-size: cover;
-   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale');
-   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale')";
-   .arrow-header {
-       border: 6px solid @white;
-       border-radius: 50%;
-       bottom: 50px;
-       color: @white;
-       cursor: pointer;
-       display: block;
-       font-size: 88px;
-       height: 100px;
-       left: 50%;
-       line-height: 110px;
-       margin-left: -50px;
-       position: absolute;
-       text-align: center;
-       width: 100px;
-   }
+  height: 100%;
+  background-color: @black;
+  background-image: url(../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale')";
+  .arrow-header {
+    border: 6px solid @white;
+    border-radius: 50%;
+    bottom: 50px;
+    color: @white;
+    cursor: pointer;
+    display: block;
+    font-size: 88px;
+    height: 100px;
+    left: 50%;
+    line-height: 110px;
+    margin-left: -50px;
+    position: absolute;
+    text-align: center;
+    width: 100px;
+  }
+  &.margin-bottom {
+    margin-bottom: 72px;
+  }
 }
 
-.navbar-default {
-   height: 124px;
-   border-top: 4px solid @black;
-   background-color: @white;
-   border-bottom: none;
+#top-navbar {
+  height: 50px;
+  border-top: 4px solid @black;
+  background-color: @white;
+  border-bottom: none;
+  font-family: 'Abel', sans-serif;
+  .arrow-nav {
+    color: @gray;
+    border: 3px solid;
+    border-radius: 50%;
+    display: block;
+    font-size: 35px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 auto;
+    text-align: center;
+    width: 44px;
+    cursor: pointer;
+    &.center-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+  .navbar-header {
+    background-color: @white;
+  }
+  nav {
+    margin-top: 0px;
+    background-color: @white;
+    .col-sm-5 > a {
+      color: @gray;
+      display: inline-block;
+      font-size: 21px;
+      text-align: center;
+      text-transform: uppercase;
+      height: 60px;
+      line-height: 60px;
+    }
+    &.in {
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .visible-xs {
+      padding: 15px 0;
+        > * {
+        color: @gray;
+        float: left;
+        font-size: 20px;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+      }
+    }
+  }
 }
 
 
@@ -67,6 +137,118 @@ body { }
 
 .content { }
 
+.aa-title {
+  float: left;
+}
+
+.section-title {
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  color: @black;
+  span {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+.news-section {
+  text-align: center;
+  color: @gray;
+  .section-title {
+    border-bottom: 3px solid #dddddd;
+    padding-bottom: 6px;
+  }
+  h2 {
+    margin-bottom: 3px;
+    a {
+      color: @black;
+      font-size: 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  .date {
+    color: @black;
+    display: block;
+    width: 100%;
+    font-size: 19px;
+    margin-bottom: 10px;
+    font-family: 'Abel', sans-serif;
+  }
+  .load-more {
+    font-family: 'Abel', sans-serif;
+    color: #dddddd;
+    text-decoration: underline;
+    font-size: 19px;
+    cursor: pointer;
+    margin: 21px auto 60px;
+    display: inline-block;
+  }
+}
+
+.biography-section {
+  text-align: center;
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+.biography-bg {
+  padding: 0;
+  .biography-image {
+    padding-top: 50px;
+  }
+  .biography-text {
+    background-color: @white;
+    padding: 20px 0 43px;
+  }
+}
+
+.tour-section {
+  .section-title {
+    border-bottom: 3px solid #dddddd;
+    padding-bottom: 6px;
+  }
+}
+
+.concert {
+  color: @black;
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: 'Abel', sans-serif;
+  h3 {
+    font-size: 25px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  .date {
+    display: block;
+    width: 100%;
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+  .venue-website {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: @gray;
+    text-decoration: none;
+  }
+}
+
+.contact-bg {
+  background: #DBDBDB;
+  padding-bottom: 30px;
+  a {
+    color: inherit;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
 
 
 /* ==========================================================================
@@ -104,8 +286,68 @@ body { }
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+  color: #9f9e9f;
+  font-size: 12px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+}
 
+
+
+/* ==========================================================================
+   Contact form
+   ========================================================================== */
+
+.wpcf7-form {
+  color: @text;
+  font-size: 12px;
+  .wpcf7-form-control {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  .wpcf7-form-control-wrap {
+    display: block !important;
+  }
+  input.wpcf7-form-control {
+    height: 30px;
+  }
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    right: 4px;
+    top: 14px;
+  }
+  .btn-default {
+    margin-top: 0 !important;
+    border-radius: 0;
+    font-size: 12px;
+  }
+  textarea {
+    margin-bottom: 0 !important;
+    max-height: 128px;
+    min-height: 128px;
+    max-width: 345px;
+    min-width: 345px;
+    resize: none;
+  }
+  .wpcf7-response-output {
+    display: none !important;
+  }
+  .nemoj-spamat {
+    display: none;
+  }
+}
 
 
 /* ==========================================================================
@@ -124,8 +366,44 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-sm-min) {
+  .banner.margin-bottom {
+    margin-bottom: 146px;
+  }
+  #top-navbar {
+    height: 124px;
+    nav {
+      margin-top: 30px;
+    }
+    .arrow-nav {
+      border: 4px solid;
+      font-size: 52px;
+      height: 60px;
+      line-height: 60px;
+      width: 60px;
+    }
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .biography-bg {
+    padding: 880px 0 580px;
+    margin-bottom: 31px;
+    background-image: url(../img/band-image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale')";
+  }
+}
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+  nav > div:first-child {
+    margin-left: 4.1667%;
+  }
+}
 
 @media (min-width: @screen-lg-min) { }

@@ -62,26 +62,24 @@ $(document).ready(UTIL.loadEvents);
 
 $(function() {
 
-  navbarOffsetTop = $('#top-navbar').offset().top;
+  if ($("body").scrollTop() > 0) {
+    bodyelem = $("body");
+  } else {
+    bodyelem = $("html,body");
+  }
 
   $(window).on("scroll", function() {
 
-    if ($("body").scrollTop() > 0) {
-      bodyelem = $("body");
-    } else {
-      bodyelem = $("html,body");
-    }
+    var fromTop = $(document).scrollTop();
 
-    var fromTop = bodyelem.scrollTop();
-
-    if (fromTop > navbarOffsetTop) {
+    if (fromTop >= bodyelem.height()) {
       $('#top-navbar').removeClass('navbar-static-top').addClass('navbar-fixed-top');
-      $('.banner').css('margin-bottom', '146px');
+      $('.banner').addClass('margin-bottom');
     }
 
-    if (fromTop <= navbarOffsetTop && $('#top-navbar').hasClass('navbar-fixed-top')) {
+    if (fromTop < bodyelem.height() && $('#top-navbar').hasClass('navbar-fixed-top')) {
       $('#top-navbar').removeClass('navbar-fixed-top').addClass('navbar-static-top');
-      $('.banner').css('margin-bottom', '0px');
+      $('.banner').removeClass('margin-bottom');
     }
 
   });
@@ -90,11 +88,31 @@ $(function() {
   $(window).resize(function(){
     var currentFontSize = parseFloat($('html').css('font-size'));
     $('html').css('font-size', currentFontSize + (altcrement *= -1) + 'px');
-    navbarOffsetTop = $('#top-navbar').offset().top;
   });
 
   $('.arrow-header').on('click', function() {
-    $("html, body").animate({scrollTop: navbarOffsetTop }, 1000);
+    bodyelem.animate({scrollTop: bodyelem.height() }, 1000);
+  });
+
+  $('.arrow-nav').on('click', function() {
+    bodyelem.animate({scrollTop: 0 }, 1000);
+  });
+
+  $('#top-navbar a').on('click', function(event) {
+    event.preventDefault();
+
+    var section = $(this).attr('href');
+    if (section == '#news') scrollTo = bodyelem.height();
+    else if (section == '#biography') scrollTo = $(section).offset().top + $('#top-navbar').height();
+    else scrollTo = $(section).offset().top - $('#top-navbar').height();
+    var animationSpeed = Math.abs($(document).scrollTop() - $(section).offset().top + $('#top-navbar').height());
+
+    bodyelem.animate({scrollTop: scrollTo }, (animationSpeed > 500) ? 1000 : 500) ;
+
+  });
+
+  $('#top-navbar nav .visible-xs a').on('click', function(event) {
+    $('.navbar-collapse').removeClass('in');
   });
 
 

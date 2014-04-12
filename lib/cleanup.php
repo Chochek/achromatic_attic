@@ -186,11 +186,11 @@ add_action('admin_init', 'achromatic_attic_remove_dashboard_widgets');
  * Clean up the_excerpt()
  */
 function achromatic_attic_excerpt_length($length) {
-  return POST_EXCERPT_LENGTH;
+  return 85;
 }
 
 function achromatic_attic_excerpt_more($more) {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'achromatic_attic') . '</a>';
+  return '';
 }
 add_filter('excerpt_length', 'achromatic_attic_excerpt_length');
 add_filter('excerpt_more', 'achromatic_attic_excerpt_more');
