@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    max-width: 90%;
   }
   .arrow-header {
     border: 6px solid @white;
@@ -150,6 +151,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
         width: 100%;
       }
     }
+  }
+}
+
+.social-icons {
+  margin-top: 17px;
+  a {
+    margin: 0 2px;
+    font-size: 18px;
+    color: @gray;
   }
 }
 
@@ -473,6 +483,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   nav > div:first-child {
     margin-left: 4.1667%;
   }
+  .social-icons a {
+    margin: 0 5px;
+  }
 }
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+  .social-icons a {
+    margin: 0 10px;
+  }
+}

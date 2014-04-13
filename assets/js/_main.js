@@ -98,7 +98,7 @@ $(function() {
     bodyelem.animate({scrollTop: 0 }, 1000);
   });
 
-  $('#top-navbar a').on('click', function(event) {
+  $('#top-navbar a.page-item').on('click', function(event) {
     event.preventDefault();
 
     var section = $(this).attr('href');

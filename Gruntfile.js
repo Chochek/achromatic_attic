@@ -17,7 +17,8 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.min.css': [
             'assets/less/app.less',
-            'assets/less/achromatic-attic-icons-font.css'
+            'assets/less/achromatic-attic-icons-font.css',
+            'assets/less/font-awesome.min.css'
           ]
         },
         options: {

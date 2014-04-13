@@ -17,26 +17,32 @@
 
     <nav class="row collapse navbar-collapse" role="navigation">
       <div class="col-sm-5 hidden-xs">
-        <a class="col-sm-4" href="#news">News</a>
-        <a class="col-sm-4 hidden-sm" href="#biography">Biography</a>
-        <a class="col-sm-4 visible-sm" href="#biography">Bio</a>
-        <a class="col-sm-4" href="#tour">Tour</a>
+        <a class="col-sm-4 page-item" href="#news">News</a>
+        <a class="col-sm-4 hidden-sm page-item" href="#biography">Biography</a>
+        <a class="col-sm-4 visible-sm page-item" href="#biography">Bio</a>
+        <a class="col-sm-4 page-item" href="#tour">Tour</a>
       </div>
       <div class="col-sm-2 col-md-1 hidden-xs">
         <i class="icon-arrow-up arrow-nav"></i>
       </div>
       <div class="col-sm-5 hidden-xs">
-        <a class="col-sm-4" href="#music">Music</a>
-        <a class="col-sm-4" href="#contact">Contact</a>
-        <div class="col-sm-4"></div>
+        <a class="col-sm-4 page-item" href="#music">Music</a>
+        <a class="col-sm-4 page-item" href="#contact">Contact</a>
+        <div class="col-sm-4 text-center">
+          <div class="social-icons">
+            <a href="https://www.facebook.com/pages/Achromatic-Attic/194844990620568" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/AchromaticAttic" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
 
       <div class="visible-xs">
-        <a href="#news">News</a>
-        <a href="#biography">Biography</a>
-        <a href="#tour">Tour</a>
-        <a href="#music">Music</a>
-        <a href="#contact">Contact</a>
+        <a href="#news page-item">News</a>
+        <a href="#biography page-item">Biography</a>
+        <a href="#tour page-item">Tour</a>
+        <a href="#music page-item">Music</a>
+        <a href="#contact page-item">Contact</a>
         <div></div>
       </div>
     </nav>
