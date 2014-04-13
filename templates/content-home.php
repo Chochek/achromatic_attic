@@ -37,7 +37,6 @@
 								$biography = apply_filters('the_content', $page->post_content);
 								echo $biography;
 							?>
-
 						</article>
 
 					</div>
@@ -96,29 +95,48 @@
 
 			</div>
 
-			<div id="music" class="row music-section section">
-
-				<?php
-					$args = array('post_type' => 'album', 'posts_per_page' => -1, 'orderby' => 'post_date', 'order' => 'DESC');
-					$albums = get_posts( $args );
-				?>
-
-				<?php foreach ( $albums as $post ) : setup_postdata( $post ); ?>
-
-				<article class="col-sm-4 concert">
-					<?php
-						$frontCover = get_post_meta( $post->ID, 'front_cover', true );
-						$backCover = get_post_meta( $post->ID, 'back_cover', true );
-					?>
-					<div style="background-image: url(<?php echo get_field('front_cover') ?>);" class="album-cover"></div>
-				</article>
-
-				<?php endforeach; wp_reset_postdata(); ?>
-
-			</div>
-
 		</div>
 	</div>
+</div>
+
+<div id="music" class="music-bg">
+
+	<?php
+		$args = array('post_type' => 'album', 'posts_per_page' => -1, 'orderby' => 'post_date', 'order' => 'DESC');
+		$albums = get_posts( $args );
+	?>
+
+	<?php foreach ( $albums as $post ) : setup_postdata( $post ); ?>
+	<div style="background-image: url(<?php echo get_field('featured_image') ?>);" class="album-cover">
+		<div class="wrap container">
+			<div class="content row">
+				<div class="main col-sm-12" role="main">
+
+					<div class="row music-section section">
+
+						<article class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 album">
+							<?php
+								$frontCover = get_post_meta( $post->ID, 'front_cover', true );
+								$featuredImage = get_post_meta( $post->ID, 'featured_image', true );
+							?>
+							<h2 class="section-title"><?php the_title(); ?></h2>
+							<p><?php the_content(); ?></p>
+
+							<div class="download-block">
+								<i class="icon-arrow-down arrow-download"></i>
+								<h3>DOWNLOAD</h3>
+							</div>
+						</article>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php endforeach; wp_reset_postdata(); ?>
+
 </div>
 
 <div id="contact" class="contact-bg">

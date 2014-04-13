@@ -1,4 +1,5 @@
 <header class="banner" role="banner">
+  <img class="logo img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
   <i class="icon-arrow-down arrow-header"></i>
 </header>
 

@@ -33,12 +33,28 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
   filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 
+.icon-achromatic {
+  color: @black;
+  display: block;
+  font-size: 205px;
+  height: 60px;
+  line-height: 0;
+}
+.icon-attic {
+  color: @black;
+  display: block;
+  font-size: 85px;
+  height: 60px;
+  line-height: 0;
+}
+
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
 .banner {
+  padding: 0 15px;
   height: 100%;
   background-color: @black;
   background-image: url(../img/header-bg.png);
@@ -46,9 +62,17 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
   background-position: center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header-bg.jpg', sizingMethod='scale')";
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
   .arrow-header {
     border: 6px solid @white;
     border-radius: 50%;
@@ -145,6 +169,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
   width: 100%;
   font-size: 40px;
   text-align: center;
+  text-transform: uppercase;
   color: @black;
   span {
     display: inline-block;
@@ -236,6 +261,49 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     color: @gray;
     text-decoration: none;
   }
+}
+
+.music-bg {
+  margin-top: 60px;
+}
+.album-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  .album {
+    background-color: rgba(27, 27, 27, 0.85);
+    color: @white;
+    height: 400px;
+    text-align: center;
+    h2 {
+      color: @white;
+      margin-bottom: 20px;
+    }
+  }
+}
+.download-block {
+  bottom: 30px;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  h3 {
+    font-size: 19px;
+    margin-top: 10px;
+  }
+}
+.arrow-download {
+  border: 4px solid;
+  border-radius: 50%;
+  display: block;
+  font-size: 52px;
+  font-weight: normal;
+  height: 60px;
+  line-height: 66px;
+  margin: 0 auto;
+  width: 60px;
 }
 
 .contact-bg {
@@ -337,8 +405,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     margin-bottom: 0 !important;
     max-height: 128px;
     min-height: 128px;
-    max-width: 345px;
-    min-width: 345px;
+    max-width: 100%;
+    min-width: 100%;
     resize: none;
   }
   .wpcf7-response-output {
@@ -394,6 +462,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale')";

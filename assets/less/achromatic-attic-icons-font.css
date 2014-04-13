@@ -23,8 +23,12 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-achromatic:before,
 .icon-arrow-down:before,
-.icon-arrow-up:before {
+.icon-arrow-up:before,
+.icon-attic:before,
+.icon-logo:before,
+.icon-logo-circle:before {
   display: inline-block;
   font-family: "achromatic-attic-icons-font";
   font-style: normal;
@@ -39,5 +43,9 @@
   font-smoothing: antialiased;
 }
 
-.icon-arrow-down:before { content: "\f152"; }
-.icon-arrow-up:before { content: "\f153"; }
+.icon-achromatic:before { content: "\f1b6"; }
+.icon-arrow-down:before { content: "\f1b7"; }
+.icon-arrow-up:before { content: "\f1b8"; }
+.icon-attic:before { content: "\f1b9"; }
+.icon-logo:before { content: "\f1ba"; }
+.icon-logo-circle:before { content: "\f1bb"; }
