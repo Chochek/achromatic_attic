@@ -68,6 +68,8 @@ $(function() {
     bodyelem = $("html,body");
   }
 
+  $('footer.content-info').css('minHeight', $(window).height() - $('#contact').height() - $('#top-navbar').height() - 31);
+
   $(window).on("scroll", function() {
 
     var fromTop = $(document).scrollTop();
@@ -88,6 +90,7 @@ $(function() {
   $(window).resize(function(){
     var currentFontSize = parseFloat($('html').css('font-size'));
     $('html').css('font-size', currentFontSize + (altcrement *= -1) + 'px');
+    $('footer.content-info').css('minHeight', $(window).height() - $('#contact').height() - $('#top-navbar').height() - 31);
   });
 
   $('.arrow-header').on('click', function() {

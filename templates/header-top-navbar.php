@@ -32,17 +32,17 @@
           <div class="social-icons">
             <a href="https://www.facebook.com/pages/Achromatic-Attic/194844990620568" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/AchromaticAttic" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.youtube.com/user/AchromaticAttic" target="_blank"><i class="fa fa-youtube"></i></a>
           </div>
         </div>
       </div>
 
       <div class="visible-xs">
-        <a href="#news page-item">News</a>
-        <a href="#biography page-item">Biography</a>
-        <a href="#tour page-item">Tour</a>
-        <a href="#music page-item">Music</a>
-        <a href="#contact page-item">Contact</a>
+        <a href="#news" class="page-item">News</a>
+        <a href="#biography" class="page-item">Biography</a>
+        <a href="#tour" class="page-item">Tour</a>
+        <a href="#music" class="page-item">Music</a>
+        <a href="#contact" class="page-item">Contact</a>
         <div></div>
       </div>
     </nav>
