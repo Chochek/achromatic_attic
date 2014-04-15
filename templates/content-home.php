@@ -65,7 +65,7 @@
 					$dateToday = date("d/m/Y");
 					$arrDateToday = explode('/', $dateToday);
 					$arrDate = explode('/', $date);
-					$upcoming = (($arrDate[0] >= $arrDateToday[0]) && ($arrDate[1] >= $arrDateToday[1]) && ($arrDate[2] >= $arrDateToday[2])) ? true : false;
+					$upcoming = (($arrDate[2] > $arrDateToday[2]) || (($arrDate[1] > $arrDateToday[1]) && ($arrDate[2] >= $arrDateToday[2])) || (($arrDate[0] > $arrDateToday[0]) && ($arrDate[1] >= $arrDateToday[1]) && ($arrDate[2] >= $arrDateToday[2]))) ? true : false;
 					$counter = 0;
 				?>
 
