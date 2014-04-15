@@ -61,11 +61,14 @@
 
 				<?php foreach ( $concerts as $post ) : setup_postdata( $post ); ?>
 				<?php
+					$doorsOpenAt = get_post_meta( $post->ID, 'doors_open_at', true );
+					if ($doorsOpenAt) $doorsOpenAt = '// ' . $doorsOpenAt;
+
 					$date = get_post_meta( $post->ID, 'date', true );
-					$dateToday = date("d/m/Y");
+					$dateToday = date("m/d/Y");
 					$arrDateToday = explode('/', $dateToday);
 					$arrDate = explode('/', $date);
-					$upcoming = (($arrDate[2] > $arrDateToday[2]) || (($arrDate[1] > $arrDateToday[1]) && ($arrDate[2] >= $arrDateToday[2])) || (($arrDate[0] > $arrDateToday[0]) && ($arrDate[1] >= $arrDateToday[1]) && ($arrDate[2] >= $arrDateToday[2]))) ? true : false;
+					$upcoming = (($arrDate[2] > $arrDateToday[2]) || (($arrDate[0] > $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2])) || (($arrDate[1] > $arrDateToday[1]) && ($arrDate[0] >= $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2]))) ? true : false;
 					$counter = 0;
 				?>
 
@@ -78,7 +81,7 @@
 							$website = get_post_meta( $post->ID, 'venue_website', true );
 						?>
 						<h3><?php echo $venue . ' // ' . $location ?></h3>
-						<span class="date"><?php echo $date ?></span>
+						<span class="date"><?php echo $arrDate[1] . '/' . $arrDate[0] . '/' . $arrDate[2] . ' ' . $doorsOpenAt;?></span>
 						<a class="venue-website" href="<?php echo 'http://' . $website ?>" target="_blank"><?php echo $website ?></a>
 					</article>
 
