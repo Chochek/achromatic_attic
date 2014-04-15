@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function achromatic_attic_scripts() {
-  wp_enqueue_style('achromatic_attic_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'c515234fb855c90490c09a93c29947dd');
+  wp_enqueue_style('achromatic_attic_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'cd6f57bde08e9d1d1da1ab1e972b2d23');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
