@@ -81,7 +81,7 @@
 							$website = get_post_meta( $post->ID, 'venue_website', true );
 						?>
 						<h3><?php echo $venue . ' // ' . $location ?></h3>
-						<span class="date"><?php echo $arrDate[1] . '/' . $arrDate[0] . '/' . $arrDate[2] . ' ' . $doorsOpenAt;?></span>
+						<span class="date"><?php echo $arrDate[1] . '/' . $arrDate[0] . '/' . $arrDate[2] . ' ' . $doorsOpenAt . 'h';?></span>
 						<a class="venue-website" href="<?php echo 'http://' . $website ?>" target="_blank"><?php echo $website ?></a>
 					</article>
 
@@ -121,13 +121,16 @@
 							<?php
 								$frontCover = get_post_meta( $post->ID, 'front_cover', true );
 								$featuredImage = get_post_meta( $post->ID, 'featured_image', true );
+								$downloadLink = get_post_meta( $post->ID, 'download_link', true );
 							?>
 							<h2 class="section-title"><?php the_title(); ?></h2>
 							<p><?php the_content(); ?></p>
 
 							<div class="download-block">
-								<i class="icon-arrow-down arrow-download"></i>
-								<h3>DOWNLOAD</h3>
+								<a href="<?php echo $downloadLink; ?>" target="_blank">
+									<i class="icon-arrow-down arrow-download"></i>
+									<h3>DOWNLOAD</h3>
+								</a>
 							</div>
 						</article>
 
