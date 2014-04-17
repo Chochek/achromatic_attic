@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function achromatic_attic_scripts() {
-  wp_enqueue_style('achromatic_attic_main', get_template_directory_uri() . '/assets/css/main.min.css', false, 'd606421c30246d3195908f29deef7dcd');
+  wp_enqueue_style('achromatic_attic_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '1c251d84f4ed7610e20126ed024206d4');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -28,7 +28,7 @@ function achromatic_attic_scripts() {
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/plugins/jquery.backgroundSize.js', array(), null, false);
   wp_register_script('background_size', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('achromatic_attic_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), 'bfabe3b986fa2ee5d705d12317185e41', true);
+  wp_register_script('achromatic_attic_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '1ef6b7a3d66afe6823f2d7de4233bcff', true);
   wp_register_script('ajax-load-more', get_template_directory_uri() . '/ajax-load-more/js/ajax-load-more.js', 'jquery', '1.0', true);
 
   wp_enqueue_script('modernizr');

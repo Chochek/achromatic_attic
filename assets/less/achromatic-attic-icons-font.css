@@ -26,8 +26,10 @@
 .icon-achromatic:before,
 .icon-achromatic-attic:before,
 .icon-arrow-down:before,
+.icon-arrow-down-alt:before,
 .icon-arrow-up:before,
 .icon-attic:before,
+.icon-full-logo:before,
 .icon-logo:before,
 .icon-logo-circle:before {
   display: inline-block;
@@ -47,7 +49,9 @@
 .icon-achromatic:before { content: "\f21f"; }
 .icon-achromatic-attic:before { content: "\f220"; }
 .icon-arrow-down:before { content: "\f221"; }
+.icon-arrow-down-alt:before { content: "\f226"; }
 .icon-arrow-up:before { content: "\f222"; }
 .icon-attic:before { content: "\f223"; }
+.icon-full-logo:before { content: "\f227"; }
 .icon-logo:before { content: "\f224"; }
 .icon-logo-circle:before { content: "\f225"; }

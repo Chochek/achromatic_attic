@@ -93,7 +93,7 @@ $(function() {
     $('footer.content-info').css('minHeight', $(window).height() - $('#contact').height() - $('#top-navbar').height() - 31);
   });
 
-  $('.arrow-header').on('click', function() {
+  $('.arrow-header, .banner .logo').on('click', function() {
     bodyelem.animate({scrollTop: bodyelem.height() }, 1000);
   });
 

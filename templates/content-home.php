@@ -128,7 +128,7 @@
 
 							<div class="download-block">
 								<a href="<?php echo $downloadLink; ?>" target="_blank">
-									<i class="icon-arrow-down arrow-download"></i>
+									<i class="icon-arrow-down-alt arrow-download"></i>
 									<h3>DOWNLOAD</h3>
 								</a>
 							</div>
