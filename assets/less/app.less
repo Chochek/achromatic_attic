@@ -300,11 +300,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: @black;
+  margin-top: 20px;
   .album {
     background-color: rgba(27, 27, 27, 0.85);
     color: @white;
     height: 400px;
     text-align: center;
+    overflow: hidden;
     h2 {
       color: @white;
       margin-bottom: 20px;
@@ -503,6 +507,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/band-image.jpg', sizingMethod='scale')";
+  }
+  .album-cover {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
   }
 }
 
