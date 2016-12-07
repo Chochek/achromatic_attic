@@ -155,7 +155,7 @@
 
 				<div class="row contact-section section">
 
-					<h1 class="section-title">CONTACT</h1>
+					<h1 class="section-title">CONTACT Test</h1>
 					<div class="col-sm-4">
 						<?php
 							$page = get_page_by_title( 'contact' );
