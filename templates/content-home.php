@@ -53,41 +53,43 @@
 			<div id="tour" class="row tour-section section">
 
 				<h1 class="section-title">TOUR DATES</h1>
+				<div class="concerts-wrapper">
 
-				<?php
-					$args = array('post_type' => 'concert', 'posts_per_page' => -1, 'meta_key' => 'date', 'orderby' => 'meta_value_num', 'order' => 'ASC');
-					$concerts = get_posts( $args );
-				?>
+					<?php
+						$args = array('post_type' => 'concert', 'posts_per_page' => -1, 'meta_key' => 'date', 'orderby' => 'meta_value_num', 'order' => 'ASC');
+						$concerts = get_posts( $args );
+					?>
 
-				<?php foreach ( $concerts as $post ) : setup_postdata( $post ); ?>
-				<?php
-					$doorsOpenAt = get_post_meta( $post->ID, 'doors_open_at', true );
-					if ($doorsOpenAt) $doorsOpenAt = '// ' . $doorsOpenAt;
+					<?php foreach ( $concerts as $post ) : setup_postdata( $post ); ?>
+					<?php
+						$doorsOpenAt = get_post_meta( $post->ID, 'doors_open_at', true );
+						if ($doorsOpenAt) $doorsOpenAt = '// ' . $doorsOpenAt;
 
-					$date = get_post_meta( $post->ID, 'date', true );
-					$dateToday = date("m/d/Y");
-					$arrDateToday = explode('/', $dateToday);
-					$arrDate = explode('/', $date);
-					$upcoming = (($arrDate[2] > $arrDateToday[2]) || (($arrDate[0] > $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2])) || (($arrDate[1] > $arrDateToday[1]) && ($arrDate[0] >= $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2]))) ? true : false;
-					$counter = 0;
-				?>
+						$date = get_post_meta( $post->ID, 'date', true );
+						$dateToday = date("m/d/Y");
+						$arrDateToday = explode('/', $dateToday);
+						$arrDate = explode('/', $date);
+						$upcoming = (($arrDate[2] > $arrDateToday[2]) || (($arrDate[0] > $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2])) || (($arrDate[1] > $arrDateToday[1]) && ($arrDate[0] >= $arrDateToday[0]) && ($arrDate[2] >= $arrDateToday[2]))) ? true : false;
+						$counter = 0;
+					?>
 
-					<?php if ($upcoming): $counter++; ?>
+						<?php if ($upcoming): $counter++; ?>
 
-					<article class="col-sm-4 concert">
-						<?php
-							$venue = get_post_meta( $post->ID, 'venue', true );
-							$location = get_post_meta( $post->ID, 'location', true );
-							$website = get_post_meta( $post->ID, 'venue_website', true );
-						?>
-						<h3><?php echo $venue . ' // ' . $location ?></h3>
-						<span class="date"><?php echo $arrDate[1] . '/' . $arrDate[0] . '/' . $arrDate[2] . ' ' . $doorsOpenAt . 'h';?></span>
-						<a class="venue-website" href="<?php echo 'http://' . $website ?>" target="_blank"><?php echo $website ?></a>
-					</article>
+						<article class="col-xs-12 col-sm-4 concert">
+							<?php
+								$venue = get_post_meta( $post->ID, 'venue', true );
+								$location = get_post_meta( $post->ID, 'location', true );
+								$website = get_post_meta( $post->ID, 'venue_website', true );
+							?>
+							<h3><?php echo $venue . ' // ' . $location ?></h3>
+							<span class="date"><?php echo $arrDate[1] . '/' . $arrDate[0] . '/' . $arrDate[2] . ' ' . $doorsOpenAt . 'h';?></span>
+							<a class="venue-website" href="<?php echo 'http://' . $website ?>" target="_blank"><?php echo $website ?></a>
+						</article>
 
-					<?php endif; ?>
+						<?php endif; ?>
 
-				<?php endforeach; wp_reset_postdata(); ?>
+					<?php endforeach; wp_reset_postdata(); ?>
+				</div>
 
 				<?php if ($counter == 0): ?>
 					<div class="text-center col-xs-12">
@@ -110,6 +112,7 @@
 	?>
 
 	<?php foreach ( $albums as $post ) : setup_postdata( $post ); ?>
+
 	<div style="background-image: url(<?php echo get_field('featured_image') ?>);" class="album-cover">
 		<div class="wrap container">
 			<div class="content row">
@@ -161,7 +164,7 @@
 						?>
 					</div>
 					<div class="col-sm-8">
-						<?php echo do_shortcode( '[contact-form-7 id="43" title="Contact form"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="4" title="Contact form"]' ); ?>
 					</div>
 
 				</div>

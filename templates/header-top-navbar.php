@@ -1,12 +1,12 @@
 <header class="banner" role="banner">
-  <img class="logo img-responsive" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
+  <img class="logo img-responsive" width="534px" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg">
   <i class="icon-arrow-down-alt arrow-header"></i>
 </header>
 
 <header class="navbar navbar-default navbar-static-top" id="top-navbar">
   <div class="container">
     <div class="navbar-header">
-      <i class="visible-xs center-icon icon-logo-circle arrow-nav"></i>
+      <img class="visible-xs center-icon arrow-nav" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon.svg" width="36px">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -23,7 +23,7 @@
         <a class="col-sm-4 page-item" href="#tour">Tour</a>
       </div>
       <div class="col-sm-2 col-md-1 hidden-xs">
-        <i class="icon-logo-circle arrow-nav"></i>
+        <img class="arrow-nav" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon.svg" width="50px">
       </div>
       <div class="col-sm-5 hidden-xs">
         <a class="col-sm-4 page-item" href="#music">Music</a>

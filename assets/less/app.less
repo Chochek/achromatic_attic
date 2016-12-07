@@ -239,6 +239,17 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     margin: 21px auto 60px;
     display: inline-block;
   }
+  .aa-news-reveal {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
 }
 
 .biography-section {
@@ -264,6 +275,18 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     border-bottom: 3px solid #dddddd;
     padding-bottom: 6px;
   }
+}
+
+.concerts-wrapper {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .concert {
@@ -403,6 +426,17 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
   }
 }
 
+.bytepanda-logo img {
+  display: inline-block;
+  height: 3rem;
+  margin-left: 0.5rem;
+  margin-top: -1rem;
+  transition: all 0.2s ease-in-out 0s;
+  &:hover {
+    height: 3.5rem;
+  }
+}
+
 
 
 /* ==========================================================================
@@ -445,7 +479,30 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Abel', sans-serif; }
     resize: none;
   }
   .wpcf7-response-output {
-    display: none !important;
+    border: medium none;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    text-align: right;
+    line-height: 14px;
+  }
+  .ajax-loader {
+    top: 100%;
+    position: absolute;
+    right: 15px;
+  }
+  .wpcf7-not-valid-tip {
+    background: @white; /* Old browsers */
+    background: -moz-linear-gradient(left,  transparent 0%, @white 10%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  transparent 0%,@white 10%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  transparent 0%,@white 10%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='@white',GradientType=1 ); /* IE6-9 */
+    padding: 3px 0 3px 10%;
+    top: 11px;
+    pointer-events: none;
   }
   .nemoj-spamat {
     display: none;

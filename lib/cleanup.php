@@ -190,7 +190,7 @@ function achromatic_attic_excerpt_length($length) {
 }
 
 function achromatic_attic_excerpt_more($more) {
-  return '';
+  return '...';
 }
 add_filter('excerpt_length', 'achromatic_attic_excerpt_length');
 add_filter('excerpt_more', 'achromatic_attic_excerpt_more');
